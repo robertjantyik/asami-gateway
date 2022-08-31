@@ -13,12 +13,20 @@ public class AsamiGatewayApplication {
         SpringApplication.run(AsamiGatewayApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public RouteLocator routeLocator(RouteLocatorBuilder builder){
         return builder.routes()
                 .route(p -> p
-                        .path("/").uri("http://localhost:8081/"))
+                        .path("/accounting**").uri("http://localhost:8082"))
+                .route(p -> p
+                        .path("/logistics**").uri("http://localhost:8083"))
+                .route(p -> p
+                        .path("/support**").uri("http://localhost:8090"))
+                .route(p -> p
+                        .path("/", "").uri("http://localhost:8081"))
+                .route(p -> p
+                        .path("/restaurant**").uri("http://localhost:8081"))
                 .build();
-    }
+    }*/
 
 }
